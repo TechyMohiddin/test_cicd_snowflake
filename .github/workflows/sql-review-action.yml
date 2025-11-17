@@ -24,7 +24,7 @@ jobs:
             BYTEBASE_SERVICE_ACCOUNT: api-sample@service.bytebase.com # set service account via environment variable
             BYTEBASE_SERVICE_ACCOUNT_SECRET: ${{ secrets.BYTEBASE_SERVICE_ACCOUNT_SECRET }} # set service account secret via environment variable
             BYTEBASE_PROJECT: "projects/testrcicd"
-            BYTEBASE_TARGETS: "instances/test_cicd/databases/test_cicd"
+            BYTEBASE_TARGETS: "instances/testrcicd/databases/TEST_CICD"
             FILE_PATTERN: "migrations-semver/*.sql"
         run: |
           bytebase-action check --url=${{ env.BYTEBASE_URL }} --project=${{ env.BYTEBASE_PROJECT }} --targets=${{ env.BYTEBASE_TARGETS }} --file-pattern=${{ env.FILE_PATTERN }}
